@@ -27,6 +27,12 @@ class ReadConfig(object):
     def url(self):
         return self._get(HOST, HOST)
 
+    def getPageUrl(self, pagename):
+        pgurl = self._get("PAGE", pagename)
+        if not pgurl.startswith("http"):
+            pgurl = self.url + pgurl
+        return pgurl
+
 
 ini = ReadConfig()
 

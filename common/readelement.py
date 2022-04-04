@@ -23,8 +23,3 @@ class Element(object):
             name, value = data.split('==')
             return name, value
         raise ArithmeticError("{}中不存在关键字：{}".format(self.file_name, item))
-
-
-if __name__ == '__main__':
-    search = Element('search')
-    print(search['搜索框'])

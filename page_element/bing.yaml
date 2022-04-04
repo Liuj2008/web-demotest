@@ -1,0 +1,3 @@
+搜索框: "xpath==//input[@id='sb_form_q']"
+候选: "css==.sa_tm"
+搜索按钮: "xpath==//label[@id='search_icon']"

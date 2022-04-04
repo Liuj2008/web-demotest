@@ -9,10 +9,10 @@ WIN = sys.platform.startswith('win')
 def main():
     """主函数"""
     steps = [
-        "venv\\Script\\activate" if WIN else "source venv/bin/activate",
-        "pytest --alluredir allure-results --clean-alluredir",
-        "allure generate allure-results -c -o allure-report",
-        "allure open allure-report"
+        #"venv\\Script\\activate" if WIN else "source venv/bin/activate",
+        "pytest --allure-features 测试baidu模块 --alluredir reports/allure-results --clean-alluredir",
+        # "allure generate allure-results -c -o allure-report",
+        # "allure open allure-report"
     ]
     for step in steps:
         subprocess.run("call " + step if WIN else step, shell=True)

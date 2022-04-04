@@ -28,7 +28,7 @@ class WebPage(object):
         self.driver.set_page_load_timeout(60)
         try:
             self.driver.get(url)
-            self.driver.implicitly_wait(10)
+            self.driver.implicitly_wait(5)
             log.info("打开网页：%s" % url)
         except TimeoutException:
             raise TimeoutException("打开%s超时请检查网络或网址服务器" % url)
